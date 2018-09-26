@@ -1,24 +1,18 @@
-# [AlloyTeam ESLint 规则](https://alloyteam.github.io/eslint-config-alloy/)
+# [Kordeta ESLint 规则](https://alloyteam.github.io/eslint-config-alloy/)
 
-[![Build Status](https://img.shields.io/travis/AlloyTeam/eslint-config-alloy.svg)](https://travis-ci.org/AlloyTeam/eslint-config-alloy) [![npm package](https://img.shields.io/npm/v/eslint-config-alloy.svg)](https://www.npmjs.org/package/eslint-config-alloy) [![npm downloads](http://img.shields.io/npm/dm/eslint-config-alloy.svg)](https://www.npmjs.org/package/eslint-config-alloy)
 
-在线浏览规则描述及示例：https://alloyteam.github.io/eslint-config-alloy/
+在线浏览规则描述及示例：https://github.com/Julien822/eslint-config-kordeta/
 
 名称 | 包含规则 | 解析器
 --- | --- | ---
 [标准规则](#标准规则) | [ESLint 规则][] | [babel-eslint][]
-[React](#react) | ESLint 规则、[eslint-plugin-react][] | babel-eslint
 [Vue](#vue) | ESLint 规则、[eslint-plugin-vue][] | [vue-eslint-parser@2.0.1-beta.2][] babel-eslint
-[TypeScript](#typescript) | ESLint 规则、[eslint-plugin-typescript][] | [typescript-eslint-parser][]
-[TypeScript React](#typescript-react) | ESLint 规则、eslint-plugin-typescript、eslint-plugin-react | typescript-eslint-parser
+
 
 [babel-eslint]: https://github.com/babel/babel-eslint
 [vue-eslint-parser@2.0.1-beta.2]: https://github.com/mysticatea/vue-eslint-parser/tree/v2.0.1-beta.2
-[typescript-eslint-parser]: https://github.com/eslint/typescript-eslint-parser
 [ESLint 规则]: https://eslint.org/docs/rules/
-[eslint-plugin-react]: https://github.com/yannickcr/eslint-plugin-react
 [eslint-plugin-vue]: https://github.com/vuejs/eslint-plugin-vue
-[eslint-plugin-typescript]: https://github.com/vuejs/eslint-plugin-typescript
 
 ## 配置原则
 
@@ -78,54 +72,6 @@ module.exports = {
 };
 ```
 
-### React
-
-安装：
-
-```bash
-npm install --save-dev eslint babel-eslint eslint-plugin-react eslint-config-alloy
-```
-
-在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
-
-```js
-module.exports = {
-    extends: [
-        'eslint-config-alloy/react',
-    ],
-    globals: {
-        // 这里填入你的项目需要的全局变量
-        // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
-        //
-        // React: false,
-        // ReactDOM: false
-    },
-    rules: {
-        // 这里填入你的项目需要的个性化配置，比如：
-        //
-        // // @fixable 一个缩进必须用两个空格替代
-        // 'indent': [
-        //     'error',
-        //     2,
-        //     {
-        //         SwitchCase: 1,
-        //         flatTernaryExpressions: true
-        //     }
-        // ],
-        // // @fixable jsx 的 children 缩进必须为两个空格
-        // 'react/jsx-indent': [
-        //     'error',
-        //     2
-        // ],
-        // // @fixable jsx 的 props 缩进必须为两个空格
-        // 'react/jsx-indent-props': [
-        //     'error',
-        //     2
-        // ]
-    }
-};
-```
-
 ### Vue
 
 安装：
@@ -146,84 +92,6 @@ module.exports = {
         // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
         //
         // Vue: false
-    },
-    rules: {
-        // 这里填入你的项目需要的个性化配置，比如：
-        //
-        // // @fixable 一个缩进必须用两个空格替代
-        // 'indent': [
-        //     'error',
-        //     2,
-        //     {
-        //         SwitchCase: 1,
-        //         flatTernaryExpressions: true
-        //     }
-        // ]
-    }
-};
-```
-
-### TypeScript
-
-安装：
-
-```bash
-npm install --save-dev eslint typescript typescript-eslint-parser babel-eslint eslint-plugin-typescript eslint-config-alloy
-```
-
-注意：由于继承了基础规则，所以如果不安装 babel-eslint 就会报错。
-
-在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
-
-```js
-module.exports = {
-    extends: [
-        'eslint-config-alloy/typescript',
-    ],
-    globals: {
-        // 这里填入你的项目需要的全局变量
-        // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
-        //
-        // jQuery: false,
-        // $: false
-    },
-    rules: {
-        // 这里填入你的项目需要的个性化配置，比如：
-        //
-        // // @fixable 一个缩进必须用两个空格替代
-        // 'indent': [
-        //     'error',
-        //     2,
-        //     {
-        //         SwitchCase: 1,
-        //         flatTernaryExpressions: true
-        //     }
-        // ]
-    }
-};
-```
-
-### TypeScript React
-
-安装：
-
-```bash
-npm install --save-dev eslint typescript typescript-eslint-parser eslint-plugin-typescript eslint-plugin-react eslint-config-alloy
-```
-
-在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
-
-```js
-module.exports = {
-    extends: [
-        'eslint-config-alloy/typescript-react',
-    ],
-    globals: {
-        // 这里填入你的项目需要的全局变量
-        // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
-        //
-        // React: false,
-        // ReactDOM: false
     },
     rules: {
         // 这里填入你的项目需要的个性化配置，比如：
@@ -295,6 +163,5 @@ npm test
 
 ## 参考
 
-- [Alloyteam Code Guide](http://alloyteam.github.io/CodeGuide)
 - [ESlint Code Guide](http://eslint.org/docs/user-guide/configuring)
 - [ESlint Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs)
