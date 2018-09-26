@@ -1,7 +1,6 @@
-# [Kordeta ESLint 规则](https://alloyteam.github.io/eslint-config-alloy/)
+# Kordeta ESLint 规则
 
 
-在线浏览规则描述及示例：https://github.com/Julien822/eslint-config-kordeta/
 
 名称 | 包含规则 | 解析器
 --- | --- | ---
@@ -39,7 +38,7 @@
 安装：
 
 ```bash
-npm install --save-dev eslint babel-eslint eslint-config-alloy
+npm install --save-dev eslint babel-eslint eslint-config-kordeta
 ```
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
@@ -47,7 +46,7 @@ npm install --save-dev eslint babel-eslint eslint-config-alloy
 ```js
 module.exports = {
     extends: [
-        'eslint-config-alloy',
+        'eslint-config-kordeta',
     ],
     globals: {
         // 这里填入你的项目需要的全局变量
@@ -77,7 +76,7 @@ module.exports = {
 安装：
 
 ```bash
-npm install --save-dev eslint babel-eslint vue-eslint-parser@2.0.1-beta.2 babel-eslint eslint-plugin-vue@3 eslint-config-alloy
+npm install --save-dev eslint babel-eslint vue-eslint-parser@2.0.1-beta.2 babel-eslint eslint-plugin-vue@3 eslint-config-kordeta
 ```
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
@@ -85,7 +84,7 @@ npm install --save-dev eslint babel-eslint vue-eslint-parser@2.0.1-beta.2 babel-
 ```js
 module.exports = {
     extends: [
-        'eslint-config-alloy/vue',
+        'eslint-config-kordeta/vue',
     ],
     globals: {
         // 这里填入你的项目需要的全局变量
