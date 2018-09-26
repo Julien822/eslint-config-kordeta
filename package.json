@@ -1,0 +1,46 @@
+{
+  "name": "eslint-config-kordeta",
+  "version": "1.0.0",
+  "description": "kordeta ESLint 规则",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && node ./test/index.js",
+    "lint": "eslint --ext .js,.vue --ignore-pattern bad.* ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julien822/eslint-config-kordeta.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintrc",
+    "eslintconfig",
+    "config",
+    "chint",
+    "kordeta",
+    "javascript",
+    "styleguide",
+    "vue"
+  ],
+  "author": "liaoxiaotong <191100049@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Julien822/eslint-config-kordeta/issues"
+  },
+  "homepage": "https://github.com/Julien822/eslint-config-kordeta/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "vue-eslint-parser": "^2.0.1-beta.2"
+  }
+}
