@@ -38,8 +38,9 @@
 安装：
 
 ```bash
-npm install --save-dev eslint babel-eslint eslint-config-kordeta
+npm install eslint-config-kordeta --save-dev
 ```
+PS：相关依赖比如eslint、babel-eslint会自动安装，如果原来项目中已有babel-eslint，请确保版本号在8.0.1以下。
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
 
@@ -76,7 +77,7 @@ module.exports = {
 安装：
 
 ```bash
-npm install --save-dev eslint babel-eslint vue-eslint-parser@2.0.1-beta.2 babel-eslint eslint-plugin-vue@3 eslint-config-kordeta
+npm install eslint-config-kordeta --save-dev
 ```
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
@@ -112,7 +113,7 @@ module.exports = {
 
 ### 在 VSCode 中使用
 
-在 VSCode 中，默认 ESLint 并不能识别 `.vue`、`.ts` 或 `.tsx` 文件，需要在「文件 => 首选项 => 设置」里做如下配置：
+在 VSCode 中，默认 ESLint 并不能识别 `.vue`文件，需要在「文件 => 首选项 => 设置」里做如下配置：
 
 ```json
 {
@@ -120,16 +121,14 @@ module.exports = {
         "javascript",
         "javascriptreact",
         "html",
-        "vue",
-        "typescript",
-        "typescriptreact"
+        "vue"
     ]
 }
 ```
 
 ### VSCode 中的 autoFixOnSave 没有效果
 
-如果需要针对 `.vue`、`.ts` 和 `.tsx` 文件开启 ESLint 的 autoFix，则需要配置成：
+如果需要针对 `.vue`文件开启 ESLint 的 autoFix，则需要配置成：
 
 ```json
 {
@@ -140,14 +139,6 @@ module.exports = {
         "html",
         {
             "language": "vue",
-            "autoFix": true
-        },
-        {
-            "language": "typescript",
-            "autoFix": true
-        },
-        {
-            "language": "typescriptreact",
             "autoFix": true
         }
     ]
