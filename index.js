@@ -68,15 +68,15 @@ module.exports = {
         'comma-style': ['error', 'last'],
         // constructor 中必须有 super
         'constructor-super': 'error',
-        // @fixable if 后面必须要有 {，除非是单行 if
-        'curly': ['error', 'multi-line'],
+        // @fixable if 后面必须要有 {}
+        'curly': ['error', 'all'],
         // @fixable 链式调用的时候，点号必须放在第二行开头处，禁止放在第一行结尾处
         'dot-location': ['error', 'property'],
         // @fixable 文件最后一行必须有一个空行
         'eol-last': 'error',
         // @fixable 必须使用 === 或 !==，禁止使用 == 或 !=，与 null 比较时除外
         'eqeqeq': ['error', 'always', {'null': 'ignore'}],
-        // @fixable 函数名和执行它的括号之间禁止有空格，这里不允许
+        // @fixable 函数名和执行它的括号之间禁止有空格
         'func-call-spacing': ['error', 'never'],
         // @fixable generator 的 * 前后必须有空格
         'generator-star-spacing': ['error', {'before': true, 'after': true}],
@@ -168,14 +168,15 @@ module.exports = {
         // @fixable 禁止出现连续的多个空格，除非是注释前，或对齐对象的属性、变量定义、import 等
         'no-multi-spaces': [
             'error', {
-            ignoreEOLComments: true,
-            exceptions: {
-                Property: true,
-                BinaryExpression: false,
-                VariableDeclarator: true,
-                ImportDeclaration: true
+                ignoreEOLComments: true,
+                exceptions: {
+                    Property: true,
+                    BinaryExpression: false,
+                    VariableDeclarator: true,
+                    ImportDeclaration: true
+                }
             }
-        }],
+        ],
         // 禁止使用 \ 来换行字符串
         'no-multi-str': 'error',
         // @fixable 禁止出现超过三行的连续空行
@@ -306,8 +307,11 @@ module.exports = {
         // @fixable if, function 等的大括号之前必须要有空格，比如 if (a) {
         'space-before-blocks': ['error', 'always'],
         // @fixable function 的小括号之前必须要有空格
+        // anonymous is for anonymous function expressions (e.g. function() {})
+        // named is for named function expressions (e.g. function foo() {})
+        // asyncArrow is for async arrow function expressions (e.g. async () => {})
         'space-before-function-paren': ['error', {
-            anonymous: 'ignore',
+            anonymous: 'never',
             named: 'never',
             asyncArrow: 'always'
         }],
@@ -445,7 +449,6 @@ module.exports = {
         'no-script-url': 'error',
         // @fixable 禁止出现没用的 label
         'no-unused-labels': 'error',
-
         // 禁止出现没必要的字符串连接
         'no-useless-concat': 'error',
         // 禁止使用 void
