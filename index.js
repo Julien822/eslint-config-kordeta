@@ -366,10 +366,17 @@ module.exports = {
         'node/process-exit-as-throw': 'error',
         // Enforce consistent param names and ordering when creating new promises.
         'promise/param-names': 'error',
-
+        // Like array-bracket-even-spacing from ESLint except it has an either option which lets you
+        // have 1 or 0 spacing padding.
         'standard/array-bracket-even-spacing': ['error', 'either'],
+        // Like computed-property-spacing around ESLint except is has an even option which lets you
+        // have 1 or 0 spacing padding.
         'standard/computed-property-even-spacing': ['error', 'even'],
+        // Ensures that we strictly follow the callback pattern with undefined, null or an error object
+        // in the first position of a callback.
         'standard/no-callback-literal': 'error',
+        // Like object-curly-spacing from ESLint except it has an either option which lets you have 1 or 0
+        // spaces padding.
         'standard/object-curly-even-spacing': ['error', 'either'],
         // eslint-config-standard end
         //
