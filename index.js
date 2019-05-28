@@ -74,8 +74,8 @@ module.exports = {
         'dot-location': ['error', 'property'],
         // @fixable 文件最后一行必须有一个空行
         'eol-last': 'error',
-        // @fixable 必须使用 === 或 !==，禁止使用 == 或 !=，与 null 比较时除外
-        'eqeqeq': ['error', 'always', {'null': 'ignore'}],
+        // @off 公司接口不规范，去掉此要求
+        'eqeqeq': 'off',
         // @fixable 函数名和执行它的括号之间禁止有空格
         'func-call-spacing': ['error', 'never'],
         // @fixable generator 的 * 前后必须有空格
