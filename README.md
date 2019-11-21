@@ -40,7 +40,7 @@
 ```bash
 npm install eslint-config-kordeta --save-dev
 ```
-PS：相关依赖比如eslint、babel-eslint会自动安装，如果原来项目中已有babel-eslint，请确保版本号在8.0.1以下。
+PS：相关依赖比如eslint、babel-eslint会自动安装，如果原来项目中已有babel-eslint，请确保版本号在8.0.1以下。如果一些依赖安装失败，请先全局安装eslint和关联的依赖。
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
 
